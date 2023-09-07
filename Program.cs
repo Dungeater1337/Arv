@@ -15,7 +15,7 @@ class Program{
         char choice = Console.ReadKey().KeyChar;
 
         if(choice == 'T' || choice == 't'){
-            Triangle triangle = new Triangle(width, height);
+            RätTriangle triangle = new RätTriangle(width, height);
             double Area = triangle.Area();
             double Circumference = triangle.Circumference();
 

@@ -1,16 +1,17 @@
 using System;
 using System.Collections.Generic;
 
-class Triangle : Shape
+class RätTriangle : Shape
 {
-    public Triangle(double width, double height) : base(width, height)
+    public RätTriangle(double width, double height) : base(width, height)
     {
        
     }
 
     public double Area()
     {
-        return  width/2 * height;
+        double area = (width * height) / 2;
+        return  area;
     }
 
     public double Circumference()
@@ -18,6 +19,9 @@ class Triangle : Shape
         double kvadrat1 = height * height;
         double kvadrat2 = width * width;
 
-        return Math.Sqrt(kvadrat1 + kvadrat2);
+        double hypotynusa = Math.Sqrt(kvadrat1 + kvadrat2);
+
+        double omkrets = height + width + hypotynusa;
+        return omkrets; 
     }
 }
